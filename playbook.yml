@@ -30,13 +30,13 @@
       sudo: no
       shell: "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3"
 
-    - name: Install RVM with Ruby 2.1.7
+    - name: Install RVM with Ruby 2.2.3
       sudo: no
-      shell: "curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.7"
+      shell: "curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.3"
 
     - name: Set default RVM Ruby
       sudo: no
-      shell: rvm alias create default ruby-2.1.7
+      shell: rvm alias create default ruby-2.2.3
 
     - name: Ensure MySQL/MariaDB is running
       command: systemctl start mariadb
