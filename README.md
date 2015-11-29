@@ -20,3 +20,6 @@ Root password is blank.
 - Guest IP is 192.168.33.11
 - vagrant ssh
 - ssh vagrant@192.168.33.11 (password is 'vagrant')
+
+#License
+Released under the [MIT License](http://www.opensource.org/licenses/MIT).
