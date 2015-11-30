@@ -5,41 +5,41 @@
   gather_facts: True
   tasks:
     - name: Update the OS
-      yum: name=* state=latest
+      dnf: name=* state=latest
 
     - name: Install MySQL/MariaDB
-      yum: name=mysql-server state=installed
+      dnf: name=mysql-server state=installed
 
     # Required for Ansible to configure MySQL
     - name: Install MySQL-python
-      yum: name=MySQL-python state=installed
+      dnf: name=MySQL-python state=installed
 
     - name: Install MySQL-dev
-      yum: name=mysql-devel state=installed
+      dnf: name=mysql-devel state=installed
 
     - name: Install git
-      yum: name=git state=installed
+      dnf: name=git state=installed
 
     - name: vim
-      yum: name=vim-enhanced state=installed
+      dnf: name=vim-enhanced state=installed
 
     - name: Install system ruby
-      yum: name=ruby state=installed
+      dnf: name=ruby state=installed
 
     - name: Setup keys for RVM
       sudo: no
       shell: "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3"
 
-    - name: Install RVM with Ruby 2.1.4
+    - name: Install RVM with Ruby 2.2.3
       sudo: no
-      shell: "curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.4"
+      shell: "curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.3"
 
     - name: Set default RVM Ruby
       sudo: no
-      shell: rvm alias create default ruby-2.1.4
+      shell: rvm alias create default ruby-2.2.3
 
     - name: Ensure MySQL/MariaDB is running
-      service: name=mysqld state=started enabled=true
+      command: systemctl start mariadb
 
     - name: Ensure MySQL/MariaDB starts at boot
       command: systemctl enable mariadb.service
