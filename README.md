@@ -9,9 +9,9 @@
 7. For more information on Vagrant see http://docs.vagrantup.com/v2/
 
 #What's inside
-1. Fedora 20 fully patched
+1. Fedora 22 fully patched
 2. MySQL/MariaDB Server, Git, and Vim installed
-3. RVM with Ruby 2.1.4
+3. RVM with Ruby 2.2.3
 
 #MySQL/MariaDB Info
 Root password is blank.
