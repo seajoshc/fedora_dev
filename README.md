@@ -2,8 +2,8 @@
 1. Install Virtualbox - https://www.virtualbox.org/wiki/Downloads
 2. Install Vagrant - https://www.vagrantup.com/downloads.html
 3. Install Ansible - `brew install ansible` or https://devopsu.com/guides/ansible-mac-osx.html
-3. Clone this repo with 'git clone git@github.groupondev.com:SRE/sre_dev.git'
-4. Go into the repo 'cd sre_dev'
+3. Clone this repo - `git clone git@github.com:irlrobot/fedora_dev.git`
+4. Go into the repo - `cd fedora_dev`
 5. To start your new dev environment run `vagrant up`.  This will take several minutes to create and provision the virtual machine.
 6. To ssh to your new dev environment run 'vagrant ssh' and its IP is 192.168.33.33
 7. For more information on Vagrant see http://docs.vagrantup.com/v2/
