@@ -28,7 +28,7 @@
 
     - name: Setup keys for RVM
       sudo: no
-      shell: "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
+      shell: "gpg2 --keyserver hkp://keys.gnupg.net:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
 
     - name: Install RVM with Ruby 2.2.3
       sudo: no
@@ -67,5 +67,3 @@
 
     - name: Test Database is Removed
       mysql_db: name=test state=absent
-
-    - file: dest=/vagrant/repos owner=vagrant group=vagrant state=directory
