@@ -22,7 +22,7 @@ vagrant plugin install vagrant-vbguest
 See https://github.com/dotless-de/vagrant-vbguest for more info.
 
 # What's inside
-1. Fedora 22 fully patched
+1. Fedora 23 fully patched
 2. MySQL/MariaDB Server, Git, and Vim installed
 3. RVM with Ruby 2.2.3
 
